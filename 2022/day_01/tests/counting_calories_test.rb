@@ -17,5 +17,4 @@ class CountingCaloriesTest < Minitest::Test
     total_calories_carried_by_top = CountingCalories.total_calories_carried_by_top(file, 3)
     assert total_calories_carried_by_top == 45000
   end
-
 end
