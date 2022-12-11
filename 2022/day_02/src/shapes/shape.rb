@@ -2,8 +2,8 @@ module Shapes
   class Shape
     include Comparable
 
-    def self.for_letter?(letter)
-      self.const_get(:LETTERS).include?(letter)
+    def for_letter?(letter)
+      self.class::LETTERS.include?(letter)
     end
 
     def points

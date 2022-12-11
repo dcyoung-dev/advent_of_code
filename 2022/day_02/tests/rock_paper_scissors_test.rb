@@ -7,7 +7,7 @@ class RockPaperScissorsTest < Minitest::Test
     file_path = File.join(File.dirname(__FILE__), filename)
     file = File.open(file_path)
     strategy_score = RockPaperScissors.strategy_score(file)
-    assert strategy_score == 15
+    assert strategy_score == 12
   end
 end
 
