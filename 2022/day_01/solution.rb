@@ -1,6 +1,16 @@
 require_relative 'src/counting_calories'
 
-puts CountingCalories.most_calories_carried(DATA)
+input = DATA
+
+puts "Part 1"
+puts "Most calories carried by an elf"
+puts CountingCalories.most_calories_carried(input)
+
+puts ""
+
+puts "Part 2"
+puts "Total calories carried by 3 elves with the most calories"
+puts CountingCalories.total_calories_carried_by_top(input, 3)
 
 __END__
 11223
