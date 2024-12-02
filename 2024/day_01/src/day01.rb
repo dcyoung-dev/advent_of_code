@@ -22,14 +22,7 @@ class Day01
   end
 
   def part_two
-    similarities = left_array.map do |left|
-      # number of time left appears in the right array
-      multiplier = right_array.count { |right| right == left }
-      left * multiplier
-    end
-
-
-    similarities.sum
+    left_array.map { |left| left * right_array.count(left) }.sum
   end
 
   private
