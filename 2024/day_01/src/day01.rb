@@ -5,7 +5,7 @@ class Day01
     @lines = file.readlines.map(&:chomp)
   end
 
-  def solution
+  def part_one
     left_array = []
     right_array = []
 
@@ -27,5 +27,26 @@ class Day01
     end
 
     total_distance
+  end
+
+  def part_two
+    left_array = []
+    right_array = []
+
+    @lines.each do |line|
+      left, right = line.scan(/\d+/)
+
+      left_array << left.to_i
+      right_array << right.to_i
+    end
+
+    similarities = left_array.map do |left|
+      # number of time left appears in the right array
+      multiplier = right_array.count { |right| right == left }
+      left * multiplier
+    end
+
+
+    similarities.sum
   end
 end

@@ -3,8 +3,12 @@ require_relative 'src/day01'
 day01 = Day01.new(DATA)
 
 puts 'Part 1'
-puts "The total distance between the lists is: #{day01.solution}"
+puts "The total distance between the lists is: #{day01.part_one}"
 # => 1222801
+
+puts 'Part 2'
+puts "The similarity between the lists is: #{day01.part_two}"
+# => 22545250
 
 __END__
 47078   87818
